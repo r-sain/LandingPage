@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohit’s Top Picks</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #fafafa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #0078d7;
+      color: #fff;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 0.3rem;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      width: 90%;
+      max-width: 1000px;
+      padding: 2rem 0;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      margin: 0.8rem 0 0.4rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #555;
+      padding: 0 1rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #0078d7;
+      color: white;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #005ea6;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rohit’s Favorite Products</h1>
+    <p>Handpicked recommendations — trusted & tested!</p>
+  </header>
+
+  <div class="container">
+    <!-- Product 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1616627451469-5a6e3cddf1b9?w=800" alt="Hostinger Hosting" />
+      <h2>Hostinger Web Hosting</h2>
+      <p>Fast, reliable, and affordable hosting with free domain & SSL.</p>
+      <a href="YOUR-AFFILIATE-LINK-1" target="_blank" class="btn">View Deal</a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600181952037-7e3f3d7a9b66?w=800" alt="Whey Protein" />
+      <h2>MyProtein Impact Whey</h2>
+      <p>High-quality protein powder with great taste & mixability.</p>
+      <a href="YOUR-AFFILIATE-LINK-2" target="_blank" class="btn">Shop Now</a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1510626176961-4b37d0d4b19c?w=800" alt="Coffee Maker" />
+      <h2>Breville Coffee Machine</h2>
+      <p>Barista-style coffee at home with automatic milk frothing.</p>
+      <a href="YOUR-AFFILIATE-LINK-3" target="_blank" class="btn">Get It Here</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Rohit Sain | Some links may be affiliate links.  
+  </footer>
+</body>
+</html>
