@@ -16,7 +16,7 @@
     }
     header {
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1rem;
       background: #0078d7;
       color: #fff;
       width: 100%;
@@ -24,6 +24,23 @@
     h1 {
       margin-bottom: 0.3rem;
     }
+
+    /* 🔍 Search Bar */
+    .search-container {
+      margin: 1.5rem 0;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+    }
+    #searchInput {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -38,7 +55,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.08);
       overflow: hidden;
       text-align: center;
-      transition: transform 0.2s;
+      transition: transform 0.2s, opacity 0.3s;
     }
     .card:hover {
       transform: translateY(-5px);
@@ -76,6 +93,13 @@
       font-size: 0.9rem;
       color: #666;
     }
+    /* Hide smoothly when filtered */
+    .hidden {
+      opacity: 0;
+      transform: scale(0.95);
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
   </style>
 </head>
 <body>
@@ -84,34 +108,86 @@
     <p>Handpicked recommendations — trusted & tested!</p>
   </header>
 
-  <div class="container">
+  <!-- 🔍 Search Bar -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search products..." />
+  </div>
+
+  <div class="container" id="productContainer">
+
+    <!-- Product 0 -->
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/61jdkRCrHXL._SL1440_.jpg" alt="EM5 Perfume Set of 3" />
+      <h2>EM5 Perfume Set of 3 For Men, Aghori, Barbershop & Bhairav</h2>
+      <p>Extrait De Parfum Set of 3 Perfume for Men, 2ml X 3 Perfumes</p>
+      <a href="https://amzn.to/43U0ZbN" target="_blank" class="btn">Shop Now</a>
+    </div>
+    
     <!-- Product 1 -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1616627451469-5a6e3cddf1b9?w=800" alt="Hostinger Hosting" />
-      <h2>Hostinger Web Hosting</h2>
-      <p>Fast, reliable, and affordable hosting with free domain & SSL.</p>
-      <a href="YOUR-AFFILIATE-LINK-1" target="_blank" class="btn">View Deal</a>
+      <img src="https://m.media-amazon.com/images/I/71ny46Yn+FL._SL1500_.jpg" alt="Ant Esports MK801 V2 Pro" />
+      <h2>Ant Esports MK801 V2 Pro</h2>
+      <p>Wireless Mecha Membrane Backlit Gaming Keyboard 94 Keys 2.4G/Bluetooth Mode Compact Numeric Pad RGB</p>
+      <a href="https://amzn.to/492tx6q" target="_blank" class="btn">View Deal</a>
     </div>
 
     <!-- Product 2 -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1600181952037-7e3f3d7a9b66?w=800" alt="Whey Protein" />
-      <h2>MyProtein Impact Whey</h2>
-      <p>High-quality protein powder with great taste & mixability.</p>
-      <a href="YOUR-AFFILIATE-LINK-2" target="_blank" class="btn">Shop Now</a>
+      <img src="https://m.media-amazon.com/images/I/81ZGGX9vBIL._SL1500_.jpg" alt="Chair Armrest Cushion" />
+      <h2>Chair Armrest Cushion Pad for Office & Gaming Chair</h2>
+      <p>Ergonomic Elbow Pillow for Comfortable Arm Support and Arm & Elbow Pain Relief</p>
+      <a href="https://amzn.to/4oWsOs3" target="_blank" class="btn">Shop Now</a>
     </div>
 
     <!-- Product 3 -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1510626176961-4b37d0d4b19c?w=800" alt="Coffee Maker" />
-      <h2>Breville Coffee Machine</h2>
-      <p>Barista-style coffee at home with automatic milk frothing.</p>
-      <a href="YOUR-AFFILIATE-LINK-3" target="_blank" class="btn">Get It Here</a>
+      <img src="https://m.media-amazon.com/images/I/715pbq8LqML._SL1500_.jpg" alt="AuraDecor Luxe Reed Diffuser" />
+      <h2>AuraDecor Luxe Reed Diffuser Set 50ml</h2>
+      <p>50 ml Reed Oil & 6 Reed Sticks, Premium Room Freshener</p>
+      <a href="https://amzn.to/47M5kz6" target="_blank" class="btn">Shop Now</a>
     </div>
+
+    <!-- Product 4 -->
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/81aX9en229L._SL1500_.jpg" alt="AuraDecor Fragrance Heat Diffuser Gift Set" />
+      <h2>AuraDecor Fragrance Heat Diffuser Gift Set with Tealight Candles</h2>
+      <p>HomeDecor || Diffuser Set || Tealight || Candles (Jasmine)</p>
+      <a href="https://amzn.to/4qO2DWj" target="_blank" class="btn">Shop Now</a>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/511s9QCeIbL._SL1024_.jpg" alt="Motul 300V" />
+      <h2>Motul 300V Factory Line Ester Core</h2>
+      <p>Fully Synthetic 10W-40 Petrol Engine Oil for Bikes (1 L)</p>
+      <a href="https://amzn.to/4nIEsWm" target="_blank" class="btn">Get It Here</a>
+    </div>
+
   </div>
 
   <footer>
-    © 2025 Rohit Sain | Some links may be affiliate links.  
+    © 2025 Rohit Sain | Some links may be affiliate links.
   </footer>
+
+  <!-- 🔍 Search Script -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".card");
+
+    searchInput.addEventListener("input", function() {
+      const query = this.value.toLowerCase();
+
+      cards.forEach(card => {
+        const title = card.querySelector("h2").textContent.toLowerCase();
+        const desc = card.querySelector("p").textContent.toLowerCase();
+
+        if (title.includes(query) || desc.includes(query)) {
+          card.classList.remove("hidden");
+        } else {
+          card.classList.add("hidden");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
